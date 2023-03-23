@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0ccebfd0f5b339ea218a4905b5634f92 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0ccebfd0f5b339ea218a4905b5634f92" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0ccebfd0f5b339ea218a4905b5634f92 = L.map(
+                "map_0ccebfd0f5b339ea218a4905b5634f92",
+                {
+                    center: [-33.9152209, 18.3758852],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_da66458cd7815a8d3d691362de25a172 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var tile_layer_81992b3367a8a1b2af2a89ad36695338 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var layer_control_8cadbb98251c636cb5eb56deaf240683 = {
+                base_layers : {
+                    "stamenterrain" : tile_layer_da66458cd7815a8d3d691362de25a172,
+                    "openstreetmap" : tile_layer_81992b3367a8a1b2af2a89ad36695338,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_8cadbb98251c636cb5eb56deaf240683.base_layers,
+                layer_control_8cadbb98251c636cb5eb56deaf240683.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+            tile_layer_81992b3367a8a1b2af2a89ad36695338.remove();
+        
+    
+            var marker_3f6d4dde30c6011405973a2c18a9cd95 = L.marker(
+                [-33.935824775929795, 18.506400866395822],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_771f8707b328c998e9afc82a99fd8219 = L.marker(
+                [-33.935824775929795, 18.506400866395822],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_46e39541230efe885d581a1b4ab4b47d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_771f8707b328c998e9afc82a99fd8219.setIcon(icon_46e39541230efe885d581a1b4ab4b47d);
+        
+    
+        var popup_8976e2723676de98788c1c5629d5aa82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c646f25a34c235d8224774f1d5969237 = $(`<div id="html_c646f25a34c235d8224774f1d5969237" style="width: 100.0%; height: 100.0%;">McDonald's Pinelands Drive-Thru</div>`)[0];
+                popup_8976e2723676de98788c1c5629d5aa82.setContent(html_c646f25a34c235d8224774f1d5969237);
+            
+        
+
+        marker_771f8707b328c998e9afc82a99fd8219.bindPopup(popup_8976e2723676de98788c1c5629d5aa82)
+        ;
+
+        
+    
+    
+            var marker_12b13f277263f7abbfc0e4a5a174e7ad = L.marker(
+                [-33.92061000872432, 18.421170040229867],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_6c3ee9ad219182209089118950ce974e = L.marker(
+                [-33.92061000872432, 18.421170040229867],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_756b41a6450e8952f5a8a810fe20b4d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_6c3ee9ad219182209089118950ce974e.setIcon(icon_756b41a6450e8952f5a8a810fe20b4d4);
+        
+    
+        var popup_faefbbeba60ca5e1e88b444687d8b029 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f8dae91eed46698820026d1296641a67 = $(`<div id="html_f8dae91eed46698820026d1296641a67" style="width: 100.0%; height: 100.0%;">McDonald's Strand Street</div>`)[0];
+                popup_faefbbeba60ca5e1e88b444687d8b029.setContent(html_f8dae91eed46698820026d1296641a67);
+            
+        
+
+        marker_6c3ee9ad219182209089118950ce974e.bindPopup(popup_faefbbeba60ca5e1e88b444687d8b029)
+        ;
+
+        
+    
+    
+            var marker_e85d6397a10ba87e23a707b41db50671 = L.marker(
+                [-33.92292001932995, 18.48598997969458],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_f45521a7f4316252ac9140752889fd2b = L.marker(
+                [-33.92292001932995, 18.48598997969458],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_f313a34e36d8b86dd170e7328913d19c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f45521a7f4316252ac9140752889fd2b.setIcon(icon_f313a34e36d8b86dd170e7328913d19c);
+        
+    
+        var popup_ee7990f5d4d98dd6045c337920cfeadf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fbf6138e235a7aa9989eacdfe08251a = $(`<div id="html_3fbf6138e235a7aa9989eacdfe08251a" style="width: 100.0%; height: 100.0%;">McDonald's Maitland Drive-Thru</div>`)[0];
+                popup_ee7990f5d4d98dd6045c337920cfeadf.setContent(html_3fbf6138e235a7aa9989eacdfe08251a);
+            
+        
+
+        marker_f45521a7f4316252ac9140752889fd2b.bindPopup(popup_ee7990f5d4d98dd6045c337920cfeadf)
+        ;
+
+        
+    
+    
+            var marker_aca26ca7248cc051b330547519f99ccb = L.marker(
+                [-33.877859997506185, 18.499539996729936],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_8bd11768f3649bef2e82e320aafeaa35 = L.marker(
+                [-33.877859997506185, 18.499539996729936],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_dc8ed0e2717b7729553b5e88ffd8e018 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_8bd11768f3649bef2e82e320aafeaa35.setIcon(icon_dc8ed0e2717b7729553b5e88ffd8e018);
+        
+    
+        var popup_03a45b7f854636c4f2657c094daeb68e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3dd26a1a63a1666f720f21bb1a39a48e = $(`<div id="html_3dd26a1a63a1666f720f21bb1a39a48e" style="width: 100.0%; height: 100.0%;">McDonald's Milnerton Drive-Thru</div>`)[0];
+                popup_03a45b7f854636c4f2657c094daeb68e.setContent(html_3dd26a1a63a1666f720f21bb1a39a48e);
+            
+        
+
+        marker_8bd11768f3649bef2e82e320aafeaa35.bindPopup(popup_03a45b7f854636c4f2657c094daeb68e)
+        ;
+
+        
+    
+    
+            var marker_62289477e009e51701d24e98da7d2f25 = L.marker(
+                [-33.931931751043535, 18.408858371978095],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_f49502f6daadb8cdbb29794a8c60ddf9 = L.marker(
+                [-33.931931751043535, 18.408858371978095],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_23a3c68fe613626d81b14b05cd6fe5e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f49502f6daadb8cdbb29794a8c60ddf9.setIcon(icon_23a3c68fe613626d81b14b05cd6fe5e8);
+        
+    
+        var popup_2f7373fbba7025e101aefa82c73f2e5f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_565f5d62a691e63ff26e3c231ba8d604 = $(`<div id="html_565f5d62a691e63ff26e3c231ba8d604" style="width: 100.0%; height: 100.0%;">McDonald's Long Street</div>`)[0];
+                popup_2f7373fbba7025e101aefa82c73f2e5f.setContent(html_565f5d62a691e63ff26e3c231ba8d604);
+            
+        
+
+        marker_f49502f6daadb8cdbb29794a8c60ddf9.bindPopup(popup_2f7373fbba7025e101aefa82c73f2e5f)
+        ;
+
+        
+    
+    
+            var marker_9a5b0dab09113143a5b0442c760b3e37 = L.marker(
+                [-33.960440016333216, 18.470650007236117],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_270473b39f10ef95033552b9765f2ef5 = L.marker(
+                [-33.960440016333216, 18.470650007236117],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_f5eb1942d45d61dfd31443e9883105b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_270473b39f10ef95033552b9765f2ef5.setIcon(icon_f5eb1942d45d61dfd31443e9883105b2);
+        
+    
+        var popup_9f7200ce4d9c80aede8242dd0980d6ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb66b7e5e5e9b9f4680acba90303bf3f = $(`<div id="html_eb66b7e5e5e9b9f4680acba90303bf3f" style="width: 100.0%; height: 100.0%;">McDonald's Rondebosch</div>`)[0];
+                popup_9f7200ce4d9c80aede8242dd0980d6ae.setContent(html_eb66b7e5e5e9b9f4680acba90303bf3f);
+            
+        
+
+        marker_270473b39f10ef95033552b9765f2ef5.bindPopup(popup_9f7200ce4d9c80aede8242dd0980d6ae)
+        ;
+
+        
+    
+    
+            var marker_04684386a15d651231036bed7076ca53 = L.marker(
+                [-33.89274999999998, 18.514940000000024],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_23db1156fdba220ae7998cfc9b4cb6a6 = L.marker(
+                [-33.89274999999998, 18.514940000000024],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_f6d2deb90dfea13640e336c12bd22293 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_23db1156fdba220ae7998cfc9b4cb6a6.setIcon(icon_f6d2deb90dfea13640e336c12bd22293);
+        
+    
+        var popup_acbdbd1349414f69a4cb94953c0cb242 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f75f232c47153d3ed08aa6ee23d47a48 = $(`<div id="html_f75f232c47153d3ed08aa6ee23d47a48" style="width: 100.0%; height: 100.0%;">McDonald's Canal Walk</div>`)[0];
+                popup_acbdbd1349414f69a4cb94953c0cb242.setContent(html_f75f232c47153d3ed08aa6ee23d47a48);
+            
+        
+
+        marker_23db1156fdba220ae7998cfc9b4cb6a6.bindPopup(popup_acbdbd1349414f69a4cb94953c0cb242)
+        ;
+
+        
+    
+    
+            var marker_88ea2910b3e54fe9542a89590789316d = L.marker(
+                [-33.96005998084324, 18.540490036150658],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_ac6951ee7f1215c440ca09979efdc641 = L.marker(
+                [-33.96005998084324, 18.540490036150658],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_dd072e08f24921733eb41d8f04f8b1cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_ac6951ee7f1215c440ca09979efdc641.setIcon(icon_dd072e08f24921733eb41d8f04f8b1cb);
+        
+    
+        var popup_26e3fe04b4e3ba556571e266f7797b8f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2e5c00ac8a580cf5140e8cc6fce3b0d = $(`<div id="html_a2e5c00ac8a580cf5140e8cc6fce3b0d" style="width: 100.0%; height: 100.0%;">McDonald's Vangate Drive-Thru</div>`)[0];
+                popup_26e3fe04b4e3ba556571e266f7797b8f.setContent(html_a2e5c00ac8a580cf5140e8cc6fce3b0d);
+            
+        
+
+        marker_ac6951ee7f1215c440ca09979efdc641.bindPopup(popup_26e3fe04b4e3ba556571e266f7797b8f)
+        ;
+
+        
+    
+    
+            var marker_244e99d57ea2d3610d7e4c9aa5b09c4b = L.marker(
+                [-33.98151864887849, 18.46536170916173],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_b0365d4e8876eb4832de41aaddb203d2 = L.marker(
+                [-33.98151864887849, 18.46536170916173],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_9aa16d3fd6d0bde8d3f27a8f6964b543 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_b0365d4e8876eb4832de41aaddb203d2.setIcon(icon_9aa16d3fd6d0bde8d3f27a8f6964b543);
+        
+    
+        var popup_769af64b043bff1a1d87baa46ac248c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4120c609908797cebb8d8c257976917 = $(`<div id="html_a4120c609908797cebb8d8c257976917" style="width: 100.0%; height: 100.0%;">McDonald's Claremont</div>`)[0];
+                popup_769af64b043bff1a1d87baa46ac248c1.setContent(html_a4120c609908797cebb8d8c257976917);
+            
+        
+
+        marker_b0365d4e8876eb4832de41aaddb203d2.bindPopup(popup_769af64b043bff1a1d87baa46ac248c1)
+        ;
+
+        
+    
+    
+            var marker_371c66df91496f89072fa81e49237c11 = L.marker(
+                [-33.91577000446421, 18.38971996604917],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_25df655558bf03009fbefb20d1907c01 = L.marker(
+                [-33.91577000446421, 18.38971996604917],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_3bedcc9f614c902e14f483a72c7a8dc0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_25df655558bf03009fbefb20d1907c01.setIcon(icon_3bedcc9f614c902e14f483a72c7a8dc0);
+        
+    
+        var popup_2a637a2837da6c1de8743f17d7ed9743 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56f46e22ddea76ca4bb1f88c5e121706 = $(`<div id="html_56f46e22ddea76ca4bb1f88c5e121706" style="width: 100.0%; height: 100.0%;">McDonald's Seapoint Drive-Thru</div>`)[0];
+                popup_2a637a2837da6c1de8743f17d7ed9743.setContent(html_56f46e22ddea76ca4bb1f88c5e121706);
+            
+        
+
+        marker_25df655558bf03009fbefb20d1907c01.bindPopup(popup_2a637a2837da6c1de8743f17d7ed9743)
+        ;
+
+        
+    
+    
+            var marker_025a51f2bc9b4d9da30201c6a9f77004 = L.marker(
+                [-33.925179989973635, 18.42104003691162],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var marker_fce5d4820bfb804fa683d1bf7b08c051 = L.marker(
+                [-33.925179989973635, 18.42104003691162],
+                {}
+            ).addTo(map_0ccebfd0f5b339ea218a4905b5634f92);
+        
+    
+            var icon_256f38c013777e3a592bbd83608a8524 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_fce5d4820bfb804fa683d1bf7b08c051.setIcon(icon_256f38c013777e3a592bbd83608a8524);
+        
+    
+        var popup_db87d4420eb3d71dda3393f6e265752f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54b18a47aaa6589158dc783e32731f18 = $(`<div id="html_54b18a47aaa6589158dc783e32731f18" style="width: 100.0%; height: 100.0%;">McDonald’s Spin Street</div>`)[0];
+                popup_db87d4420eb3d71dda3393f6e265752f.setContent(html_54b18a47aaa6589158dc783e32731f18);
+            
+        
+
+        marker_fce5d4820bfb804fa683d1bf7b08c051.bindPopup(popup_db87d4420eb3d71dda3393f6e265752f)
+        ;
+
+        
+    
+</script>
+</html>
